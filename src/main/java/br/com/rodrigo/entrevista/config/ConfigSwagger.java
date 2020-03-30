@@ -8,6 +8,6 @@ import javax.ws.rs.core.Application;
 
 @OpenAPIDefinition(info = @Info(description = "Dólar comercial (venda e compra) ",
                                 title = "API - Cotação do dólar comercial",version = "0.0.1"))
-@ApplicationPath("")
+@ApplicationPath("/api")
 public class ConfigSwagger extends Application {
 }
