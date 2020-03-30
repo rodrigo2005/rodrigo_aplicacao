@@ -3,7 +3,7 @@
 #
 # Before building the docker image run:
 #
-# mvn package -Pnative -Dquarkus.native.container-build=true
+mvn package -Pnative -Dquarkus.native.container-build=true
 #
 # Then, build the image with:
 #
@@ -24,7 +24,7 @@ RUN chmod 775 /work /work/application \
   && chmod -R "g+rwX" /work \
   && chown -R 1001:root /work
 
-EXPOSE 8080
+EXPOSE 8081
 USER 1001
 
 CMD ["./application", "-Dquarkus.http.host=0.0.0.0"]

@@ -56,6 +56,12 @@ services:
       - COLLECTOR_ZIPKIN_HTTP_PORT=9411
       - LOG_LEVEL=debug
     restart: on-failure
+  cotacao:
+    image: cotacao:1.0
+    container_name: cotacao-container
+    restart: always
+    ports:
+      - 8081:8081
   prometheus:
     image: prom/prometheus
     command: ["--config.file=/prometheus-data/prometheus.yaml"]
