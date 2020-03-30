@@ -10,10 +10,13 @@ public class CotacaoDTO {
     @Schema(description = "Hora em que o usuário realizou a requisição.")
     private LocalDateTime dataHoraRequisicao;
 
+    @Schema(description = "Data em que a cotação foi cadastrada.")
     private LocalDateTime dataCotacao;
 
+    @Schema(description = "Valor da cotação para compra")
     private Double cotacaoCompra;
 
+    @Schema(description = "Valor da cotação para compra")
     private Double cotacaoVenda;
 
     public CotacaoDTO(Cotacao cotacao) {
